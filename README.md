@@ -29,8 +29,9 @@ O projeto é um site responsivo de inscrição e indicação para eventos.
 ## Tecnologias Utilizadas
 
 - **React:** Uma biblioteca JavaScript para construir interfaces de usuário.
-- **TypeScript:** Um superconjunto do JavaScript que adiciona tipagem estática opcional.
+- **React Icons:** Conjunto de ícones populares para uso em projetos React.
 - **Tailwind CSS:** Um framework CSS baseado em utilitários.
+- **TypeScript:** Um superconjunto do JavaScript que adiciona tipagem estática opcional.
 
 ## URL do Projeto
 

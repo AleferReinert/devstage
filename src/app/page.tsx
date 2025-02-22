@@ -1,12 +1,15 @@
 import { Button } from '@/components/Button'
+import { LuArrowRight, LuCopy } from 'react-icons/lu'
 
 export default function Home() {
 	return (
 		<main>
-			<div className='font-bold'>
-				<h1 className='text-2xl text-neutral-900 font-black my-4'>DevStage</h1>
-				<Button>First component</Button>
-			</div>
+			<Button>
+				Label <LuArrowRight />
+			</Button>
+			<Button theme='icon'>
+				<LuCopy />
+			</Button>
 		</main>
 	)
 }
