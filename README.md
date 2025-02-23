@@ -1,6 +1,6 @@
 # NLW Connect - DevStage (React)
 
-O projeto é um site responsivo de inscrição e indicação para eventos.
+DevStage é site responsivo de inscrição e indicação para eventos.
 
 ## Desenvolvimento
 
@@ -28,10 +28,11 @@ O projeto é um site responsivo de inscrição e indicação para eventos.
 
 ## Tecnologias Utilizadas
 
-- **React:** Uma biblioteca JavaScript para construir interfaces de usuário.
-- **React Icons:** Conjunto de ícones populares para uso em projetos React.
-- **Tailwind CSS:** Um framework CSS baseado em utilitários.
-- **TypeScript:** Um superconjunto do JavaScript que adiciona tipagem estática opcional.
+- **React:** Biblioteca JavaScript para construir interfaces de usuário.
+- **React Icons:** Conjunto de ícones para projetos React.
+- **Storybook**: Ferramenta para construir e testar componentes de forma isolada.
+- **Tailwind CSS:** Framework CSS baseado em utilitários.
+- **TypeScript:** Superset de JavaScript que adiciona tipagem estática opcional.
 
 ## URL do Projeto
 
