@@ -28,5 +28,24 @@ export const Default: Story = {
 		await step('Verify children', () => {
 			expect(children).toBeVisible()
 		})
+
+		await step('Verify heading is hidden', () => {
+			const heading = canvas.queryByRole('heading', { level: 2 })
+			expect(heading).not.toBeInTheDocument()
+		})
+	}
+}
+
+export const Heading: Story = {
+	args: {
+		heading: 'Custom heading'
+	},
+	play: async ({ canvasElement, step }) => {
+		const canvas = within(canvasElement)
+
+		await step('Verify custom heading', () => {
+			const heading = canvas.getByRole('heading', { level: 2 })
+			expect(heading).toHaveTextContent('Custom heading')
+		})
 	}
 }

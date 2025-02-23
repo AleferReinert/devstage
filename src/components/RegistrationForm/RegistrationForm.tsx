@@ -5,9 +5,8 @@ import { Input } from '../Input/Input'
 
 export function RegistrationForm() {
 	return (
-		<form>
-			<Box>
-				<h2 className='text-xl text-gray-200 mb-6'>Inscrição</h2>
+		<form className=''>
+			<Box heading='Inscrição' className='h-full'>
 				<div className='mb-3'>
 					<Input placeholder='Nome completo' icon={LuUser} />
 				</div>
