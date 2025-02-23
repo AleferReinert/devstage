@@ -15,7 +15,6 @@ const preview: Preview = {
 		controls: {
 			hideNoControlsWarning: true
 		},
-		layout: 'centered',
 		options: {
 			showPanel: true,
 			panelDirection: 'right'

@@ -1,5 +1,5 @@
-import { ComponentProps } from 'react'
-import { IconType } from 'react-icons'
+import type { ComponentProps } from 'react'
+import type { IconType } from 'react-icons'
 
 interface InputProps extends ComponentProps<'input'> {
 	icon: IconType

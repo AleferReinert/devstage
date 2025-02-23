@@ -9,6 +9,9 @@ const meta = {
 	args: {
 		icon: LuMail,
 		placeholder: 'Your e-mail'
+	},
+	parameters: {
+		layout: 'centered'
 	}
 } satisfies Meta<typeof Input>
 
