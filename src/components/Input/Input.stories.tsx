@@ -36,7 +36,7 @@ export const Default: Story = {
 
 export const WithError: Story = {
 	args: {
-		error: true
+		error: 'Error message'
 	},
 	play: async ({ canvasElement, step }) => {
 		const canvas = within(canvasElement)

@@ -13,6 +13,7 @@ export function LinkCopy({ url }: LinkCopyProps) {
 		navigator.clipboard.writeText(url)
 		setCopied(true)
 
+		// Select url
 		const selection = window.getSelection()
 		const range = document.createRange()
 		range.selectNodeContents(textRef.current!)
