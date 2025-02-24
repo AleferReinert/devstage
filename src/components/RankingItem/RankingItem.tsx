@@ -8,7 +8,7 @@ interface RankingItemProps {
 }
 export function RankingItem({ position, name, indications }: RankingItemProps) {
 	return (
-		<Box className='py-6 px-7 relative flex justify-between gap-7 items-center'>
+		<Box data-testid='RankingItemComponent' className='py-6 px-7 relative flex justify-between gap-7 items-center'>
 			<div>
 				<h3 className='text-gray-300 !font-sans mb-2 !font-normal'>
 					<span className='font-bold'>{position}º</span> | {name}
