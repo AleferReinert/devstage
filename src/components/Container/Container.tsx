@@ -4,5 +4,5 @@ interface ContainerProps {
 	children: ReactNode
 }
 export function Container({ children }: ContainerProps) {
-	return <div className='px-4 mx-auto w-full max-w-[1126px]'>{children}</div>
+	return <div className='px-4 mx-auto w-full max-w-[1126px] leading-none'>{children}</div>
 }

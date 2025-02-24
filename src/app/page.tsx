@@ -9,7 +9,7 @@ export default function Home() {
 			<Container>
 				<div className='text-center space-y-5 mb-10 leading-none lg:text-left lg:space-y-7 lg:mb-16'>
 					<Logo />
-					<h1 className='text-4xl font-heading font-semibold sm:text-5xl 2xl:text-7xl'>
+					<h1 className='text-4xl sm:text-5xl 2xl:text-7xl'>
 						<span className='text-blue block'>CodeCraft</span>
 						<span className='text-gray-100'>Summit 2025</span>
 					</h1>
