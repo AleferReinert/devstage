@@ -3,7 +3,7 @@ import { expect, within } from '@storybook/test'
 import { RegistrationForm } from './RegistrationForm'
 
 const meta = {
-	title: 'RegistrationForm',
+	title: 'Components/RegistrationForm',
 	component: RegistrationForm
 } satisfies Meta<typeof RegistrationForm>
 

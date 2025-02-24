@@ -3,7 +3,7 @@ import { expect, fn, userEvent, within } from '@storybook/test'
 import { LinkCopy } from './LinkCopy'
 
 const meta = {
-	title: 'LinkCopy',
+	title: 'Components/LinkCopy',
 	component: LinkCopy,
 	args: {
 		url: 'https://example.com/0123456789'

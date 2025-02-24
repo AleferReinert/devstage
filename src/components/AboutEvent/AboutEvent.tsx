@@ -4,6 +4,7 @@ import { Box } from '../Box/Box'
 export function AboutEvent() {
 	return (
 		<Box
+			data-testid='AboutEventComponent'
 			heading={
 				<>
 					<span>Sobre o evento</span>

@@ -3,7 +3,7 @@ import { expect, within } from '@storybook/test'
 import { Logo } from './Logo'
 
 const meta = {
-	title: 'Logo',
+	title: 'Components/Logo',
 	component: Logo,
 	parameters: {
 		layout: 'centered'

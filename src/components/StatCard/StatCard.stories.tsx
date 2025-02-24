@@ -4,7 +4,7 @@ import { LuMousePointerClick } from 'react-icons/lu'
 import { StatCard } from './StatCard'
 
 const meta = {
-	title: 'StatCard',
+	title: 'Components/StatCard',
 	component: StatCard,
 	args: {
 		title: 'Acessos ao link',

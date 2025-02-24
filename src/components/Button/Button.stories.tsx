@@ -4,7 +4,7 @@ import { LuCopy } from 'react-icons/lu'
 import { Button } from './Button'
 
 const meta = {
-	title: 'Button',
+	title: 'Components/Button',
 	component: Button,
 	parameters: {
 		layout: 'centered'

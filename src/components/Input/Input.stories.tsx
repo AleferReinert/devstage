@@ -4,7 +4,7 @@ import { LuMail } from 'react-icons/lu'
 import { Input } from './Input'
 
 const meta = {
-	title: 'Input',
+	title: 'Components/Input',
 	component: Input,
 	args: {
 		icon: LuMail,

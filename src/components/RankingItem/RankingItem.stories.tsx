@@ -3,7 +3,7 @@ import { expect, within } from '@storybook/test'
 import { RankingItem } from './RankingItem'
 
 const meta = {
-	title: 'RankingItem',
+	title: 'Components/RankingItem',
 	component: RankingItem,
 	args: {
 		position: 1,
