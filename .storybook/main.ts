@@ -6,15 +6,14 @@ const config: StorybookConfig = {
 	framework: {
 		name: '@storybook/nextjs',
 		options: {}
-	}
+	},
 	// docs: {},
 
-	// staticDirs: ['../public'],
-
-	// webpackFinal: config => {
-	// 	config.resolve?.modules?.push(`${process.cwd()}/src`)
-	// 	return config
-	// }
+	staticDirs: ['../public'],
+	webpackFinal: config => {
+		config.resolve?.modules?.push(`${process.cwd()}/src`)
+		return config
+	}
 }
 export default config
 

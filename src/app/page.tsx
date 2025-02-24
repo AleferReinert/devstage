@@ -15,9 +15,13 @@ export default function Home() {
 					</h1>
 				</div>
 
-				<div className='grid gap-4 md:gap-5 lg:grid-cols-[1fr_440px] lg:grid-rows-[1fr]'>
-					<AboutEvent />
-					<RegistrationForm />
+				<div className='grid grid-cols-1 gap-4 lg:grid md:gap-5 lg:grid-cols-10 lg:grid-rows-[1fr]'>
+					<div className='lg:col-span-6'>
+						<AboutEvent />
+					</div>
+					<div className='lg:col-span-4 lg:h-full'>
+						<RegistrationForm />
+					</div>
 				</div>
 			</Container>
 		</main>

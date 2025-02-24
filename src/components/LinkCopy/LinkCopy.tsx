@@ -27,8 +27,8 @@ export function LinkCopy({ url }: LinkCopyProps) {
 
 	return (
 		<div className='bg-gray-800 border border-gray-600 rounded p-2 grid grid-cols-[min-content_1fr_min-content] items-center'>
-			<LuLink size='20' className='mx-2 text-gray-100' />
-			<p ref={textRef} className='text-gray-100'>
+			<LuLink size='20' className='ml-2 text-gray-100' />
+			<p ref={textRef} className='text-gray-100 px-2 overflow-hidden text-ellipsis whitespace-nowrap'>
 				{url}
 			</p>
 

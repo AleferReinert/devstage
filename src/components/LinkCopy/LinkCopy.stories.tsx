@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { expect, userEvent, within } from '@storybook/test'
+import { expect, fn, userEvent, within } from '@storybook/test'
 import { LinkCopy } from './LinkCopy'
 
 const meta = {
@@ -28,9 +28,10 @@ export const Default: Story = {
 		})
 
 		await step('Copy url on button click', async () => {
+			const mockWriteText = fn()
+			navigator.clipboard.writeText = mockWriteText
 			await userEvent.click(buttonCopy)
-
-			expect(await navigator.clipboard.readText()).toBe('https://example.com/0123456789')
+			expect(mockWriteText).toHaveBeenCalledWith('https://example.com/0123456789')
 		})
 	}
 }

@@ -13,6 +13,7 @@ export function AboutEvent() {
 					</span>
 				</>
 			}
+			className='p-6 md:p-8'
 		>
 			<p className='text-gray-300 text-sm leading-[160%] md:text-base'>
 				Um evento feito por e para pessoas desenvolvedoras apaixonadas por criar soluções inovadoras e compartilhar

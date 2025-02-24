@@ -2,7 +2,7 @@
 
 DevStage é site responsivo de inscrição e indicação para eventos.
 
-## Desenvolvimento
+## Começando
 
 1. Clone o repositório:
 
@@ -16,10 +16,24 @@ DevStage é site responsivo de inscrição e indicação para eventos.
    npm i
    ```
 
-3. Inicie o servidor de desenvolvimento:
+## Scripts
+
+1. Inicie o servidor de desenvolvimento:
 
    ```
    npm run dev
+   ```
+
+2. Inicie o Storybook:
+
+   ```
+   npm run storybook
+   ```
+
+3. Execute os testes:
+
+   ```
+   npm run test-storybook
    ```
 
 ## Material complementar
@@ -32,6 +46,7 @@ DevStage é site responsivo de inscrição e indicação para eventos.
 - **React Icons:** Conjunto de ícones para projetos React.
 - **Storybook**: Ferramenta para construir e testar componentes de forma isolada.
 - **Tailwind CSS:** Framework CSS baseado em utilitários.
+- **Testing Library:** Ferramenta de testes unitários.
 - **TypeScript:** Superset de JavaScript que adiciona tipagem estática opcional.
 
 ## URL do Projeto

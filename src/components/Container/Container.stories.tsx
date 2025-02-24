@@ -25,7 +25,8 @@ export const Default: Story = {
 		const canvas = within(canvasElement)
 
 		await step('Verify children', () => {
-			expect(canvas).toHaveTextContent('children')
+			const children = canvas.getByText('children with bg to view dimensions')
+			expect(children).toBeVisible()
 		})
 	}
 }
