@@ -13,6 +13,9 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
 	name: 'Inscrição Confirmada',
+	args: {
+		params: Promise.resolve({ userId: '123' })
+	},
 	play: async ({ canvasElement, step }) => {
 		const canvas = within(canvasElement)
 

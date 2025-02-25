@@ -7,6 +7,9 @@ const config: StorybookConfig = {
 		name: '@storybook/nextjs',
 		options: {}
 	},
+	features: {
+		experimentalRSC: true // to create server side components
+	},
 	// docs: {},
 
 	staticDirs: ['../public'],
