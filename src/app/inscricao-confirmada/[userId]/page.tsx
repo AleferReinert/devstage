@@ -5,7 +5,13 @@ import { RankingItem } from '@/components/RankingItem/RankingItem'
 import { StatCard } from '@/components/StatCard/StatCard'
 import { LuBadgeCheck, LuMedal, LuMousePointerClick } from 'react-icons/lu'
 
-export default function ConfirmedPage() {
+interface ConfirmedPageProps {
+	params: Promise<{ userId: string }>
+}
+export default async function ConfirmedPage({ params }: ConfirmedPageProps) {
+	const { userId } = await params
+	const inviteUrl = `${process.env.API_URL}/invites/${userId}`
+
 	return (
 		<main>
 			<Container>
@@ -26,7 +32,7 @@ export default function ConfirmedPage() {
 							</p>
 						</div>
 
-						<LinkCopy url='http://example.com/0a2782929' />
+						<LinkCopy url={inviteUrl} />
 
 						<div className='grid gap-2 mt-5 sm:grid-cols-3 md:gap-3 md:mt-6'>
 							<StatCard title='Acessos ao link' value='942' icon={LuMousePointerClick} />

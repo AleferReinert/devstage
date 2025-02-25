@@ -16,6 +16,8 @@ DevStage é site responsivo de inscrição e indicação para eventos.
    npm i
    ```
 
+3. Defina as variáveis de ambiente como em `.env.example`.
+
 ## Scripts
 
 1. Inicie o servidor de desenvolvimento:
