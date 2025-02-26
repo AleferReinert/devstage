@@ -30,7 +30,7 @@ interface ConfirmedPageProps {
 		position: number | null
 	}>
 }
-export default async function ConfirmedPage({ params, getData = getAllData }: ConfirmedPageProps) {
+const ConfirmedPage = async ({ params, getData = getAllData }: ConfirmedPageProps) => {
 	const { userId } = params
 	const { inviteUrl, ranking, totalClicks, totalSubscribers, position } = await getData({ userId })
 
@@ -82,3 +82,4 @@ export default async function ConfirmedPage({ params, getData = getAllData }: Co
 	)
 }
 
+export default ConfirmedPage
