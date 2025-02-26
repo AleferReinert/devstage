@@ -3,19 +3,14 @@ import { Box } from '../Box/Box'
 
 export function AboutEvent() {
 	return (
-		<Box
-			data-testid='AboutEventComponent'
-			heading={
-				<>
-					<span>Sobre o evento</span>
-					<span className='text-purple flex items-center gap-2 text-xs'>
-						<LuRadio size={20} />
-						<span>AO VIVO</span>
-					</span>
-				</>
-			}
-			className='p-6 md:p-8'
-		>
+		<Box data-testid='AboutEventComponent' className='p-6 md:p-8'>
+			<h2 className='text-xl text-gray-200 mb-6 flex justify-between'>
+				<span>Sobre o evento</span>
+				<span className='text-purple flex items-center gap-2 text-xs'>
+					<LuRadio size={20} />
+					<span>AO VIVO</span>
+				</span>
+			</h2>
 			<p className='text-gray-300 text-sm leading-[160%] md:text-base'>
 				Um evento feito por e para pessoas desenvolvedoras apaixonadas por criar soluções inovadoras e compartilhar
 				conhecimento. Vamos mergulhar nas tendências mais recentes em desenvolvimento de software, arquitetura de

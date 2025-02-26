@@ -12,15 +12,8 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
 	args: {
-		children: 'children with bg to view dimensions'
+		children: <p className='text-center p-4 bg-gray-600'>children with bg to view dimensions</p>
 	},
-	decorators: [
-		Story => (
-			<div className='bg-blue text-center'>
-				<Story />
-			</div>
-		)
-	],
 	play: async ({ canvasElement, step }) => {
 		const canvas = within(canvasElement)
 

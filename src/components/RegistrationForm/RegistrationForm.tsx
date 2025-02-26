@@ -33,7 +33,8 @@ export function RegistrationForm() {
 
 	return (
 		<form onSubmit={handleSubmit(onRegistration)} className='h-full' data-testid='RegistrationFormComponent'>
-			<Box heading='Inscrição' className='p-6 md:p-8 h-full'>
+			<Box className='p-6 md:p-8 h-full'>
+				<h2 className='text-xl text-gray-200 mb-6'>Inscrição</h2>
 				<div className='mb-3'>
 					<Input placeholder='Nome completo' icon={LuUser} {...register('name')} error={errors.name?.message} />
 				</div>
