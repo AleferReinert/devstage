@@ -5,7 +5,12 @@ import Home from './page'
 const meta = {
 	title: 'Pages/Home',
 	component: Home,
-	tags: ['!autodocs']
+	tags: ['!autodocs'],
+	parameters: {
+		nextjs: {
+			appDirectory: true
+		}
+	}
 } satisfies Meta<typeof Home>
 
 export default meta

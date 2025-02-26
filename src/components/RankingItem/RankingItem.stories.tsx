@@ -8,7 +8,8 @@ const meta = {
 	args: {
 		position: 1,
 		name: 'André Souza',
-		indications: 1.128
+		indications: 259,
+		badge: false
 	},
 	parameters: {
 		layout: 'centered'
@@ -34,12 +35,31 @@ export const Default: Story = {
 
 		await step('Verify indications', () => {
 			const indications = canvas.getByRole('paragraph')
-			expect(indications).toHaveTextContent('1.128')
+			expect(indications).toHaveTextContent('259')
 		})
 
 		await step('Verify medal image', () => {
 			const medalImage = canvas.getByRole('img', { name: '1' })
 			expect(medalImage).toBeVisible()
+		})
+
+		await step('Verify badge is hidden', () => {
+			const badge = canvas.queryByText('Você')
+			expect(badge).not.toBeInTheDocument()
+		})
+	}
+}
+
+export const WithBadge: Story = {
+	args: {
+		badge: true
+	},
+	play: async ({ canvasElement, step }) => {
+		const canvas = within(canvasElement)
+
+		await step('Verify badge', () => {
+			const badge = canvas.getByText('Você')
+			expect(badge).toBeVisible()
 		})
 	}
 }

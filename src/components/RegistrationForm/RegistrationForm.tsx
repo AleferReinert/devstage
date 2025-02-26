@@ -1,7 +1,7 @@
 'use client'
 import { subscribeToEvent } from '@/http/api'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { LuArrowRight, LuMail, LuUser } from 'react-icons/lu'
 import { z } from 'zod'
@@ -18,6 +18,7 @@ type RegistrationSchema = z.infer<typeof registrationSchema>
 
 export function RegistrationForm() {
 	const router = useRouter()
+	const searchParams = useSearchParams()
 	const {
 		register,
 		handleSubmit,
@@ -25,7 +26,8 @@ export function RegistrationForm() {
 	} = useForm<RegistrationSchema>({ resolver: zodResolver(registrationSchema) })
 
 	async function onRegistration({ name, email }: RegistrationSchema) {
-		const { subscriberId } = await subscribeToEvent({ name, email })
+		const referrer = searchParams.get('referrer')
+		const { subscriberId } = await subscribeToEvent({ name, email, referrer })
 		router.push(`/inscricao-confirmada/${subscriberId}`)
 	}
 

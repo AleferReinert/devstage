@@ -13,11 +13,14 @@ const meta = {
 	},
 	decorators: [
 		Story => (
-			<div className='text-center text-gray-100'>
+			<div className='w-2xs'>
 				<Story />
 			</div>
 		)
-	]
+	],
+	parameters: {
+		layout: 'centered'
+	}
 } satisfies Meta<typeof StatCard>
 
 export default meta

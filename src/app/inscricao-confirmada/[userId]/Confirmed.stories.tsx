@@ -2,10 +2,33 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
 import Confirmed from './page'
 
+const mockGetData = async ({ userId }: { userId: string }) => {
+	return {
+		inviteUrl: `https://mocked-url.com/invites/${userId}`,
+		ranking: [
+			{ name: 'John Doe', score: 34 },
+			{ name: 'Mike Smith', score: 20 },
+			{ name: 'Bob Johnson', score: 7 }
+		],
+		totalClicks: 50,
+		totalSubscribers: 20,
+		position: 2
+	}
+}
+
 const meta = {
 	title: 'Pages/Inscrição Confirmada',
 	component: Confirmed,
-	tags: ['!autodocs']
+	tags: ['!autodocs'],
+	parameters: {
+		nextjs: {
+			appDirectory: true
+		}
+	},
+	args: {
+		params: { userId: '123' },
+		getData: mockGetData
+	}
 } satisfies Meta<typeof Confirmed>
 
 export default meta
@@ -13,9 +36,6 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
 	name: 'Inscrição Confirmada',
-	args: {
-		params: Promise.resolve({ userId: '123' })
-	},
 	play: async ({ canvasElement, step }) => {
 		const canvas = within(canvasElement)
 

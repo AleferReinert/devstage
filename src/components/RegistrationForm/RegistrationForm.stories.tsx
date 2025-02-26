@@ -4,7 +4,12 @@ import { RegistrationForm } from './RegistrationForm'
 
 const meta = {
 	title: 'Components/RegistrationForm',
-	component: RegistrationForm
+	component: RegistrationForm,
+	parameters: {
+		nextjs: {
+			appDirectory: true
+		}
+	}
 } satisfies Meta<typeof RegistrationForm>
 
 export default meta

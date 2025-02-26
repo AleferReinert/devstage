@@ -1,16 +1,11 @@
-import type { Preview } from '@storybook/react'
-import tailwindColors from 'tailwindcss/colors'
+import { Preview } from '@storybook/react'
 import '../src/app/globals.css'
 
 const preview: Preview = {
 	tags: ['autodocs'],
 	parameters: {
 		backgrounds: {
-			values: [
-				{ name: 'Dark', value: tailwindColors.gray[900] },
-				{ name: 'Light', value: '#fff' }
-			],
-			default: 'Dark'
+			disable: true
 		},
 		controls: {
 			hideNoControlsWarning: true

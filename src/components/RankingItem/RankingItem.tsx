@@ -5,8 +5,9 @@ interface RankingItemProps {
 	position: number
 	name: string
 	indications: number
+	badge: boolean
 }
-export function RankingItem({ position, name, indications }: RankingItemProps) {
+export function RankingItem({ position, name, indications, badge }: RankingItemProps) {
 	return (
 		<Box data-testid='RankingItemComponent' className='py-6 px-7 relative flex justify-between gap-7 items-center'>
 			<div>
@@ -15,7 +16,11 @@ export function RankingItem({ position, name, indications }: RankingItemProps) {
 				</h3>
 				<div className='flex gap-3 items-center'>
 					<p className='font-heading font-semibold text-2xl text-gray-200'>{indications}</p>
-					<span className='bg-gray-500 rounded-sm px-3 inline-block text-xs font-semibold leading-7'>Você</span>
+					{badge && (
+						<span className='bg-gray-500 text-gray-300 rounded-sm px-3 inline-block text-xs font-semibold leading-7'>
+							Você
+						</span>
+					)}
 				</div>
 			</div>
 			<Image
@@ -23,7 +28,7 @@ export function RankingItem({ position, name, indications }: RankingItemProps) {
 				src={`/medal-${position}.svg`}
 				className='relative -mt-6'
 				width={56}
-				height={85.23}
+				height={86}
 			/>
 		</Box>
 	)

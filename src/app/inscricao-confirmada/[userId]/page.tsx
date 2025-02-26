@@ -3,14 +3,36 @@ import { LinkCopy } from '@/components/LinkCopy/LinkCopy'
 import { Logo } from '@/components/Logo/Logo'
 import { RankingItem } from '@/components/RankingItem/RankingItem'
 import { StatCard } from '@/components/StatCard/StatCard'
+import {
+	getRanking,
+	getSubscriberInviteClicks,
+	getSubscriberInviteCount,
+	getSubscriberRankingPosition
+} from '@/http/api'
 import { LuBadgeCheck, LuMedal, LuMousePointerClick } from 'react-icons/lu'
 
-interface ConfirmedPageProps {
-	params: Promise<{ userId: string }>
-}
-export default async function ConfirmedPage({ params }: ConfirmedPageProps) {
-	const { userId } = await params
+async function getAllData({ userId }: { userId: string }) {
 	const inviteUrl = `${process.env.API_URL}/invites/${userId}`
+	const { ranking } = await getRanking()
+	const { count: totalClicks } = await getSubscriberInviteClicks(userId)
+	const { count: totalSubscribers } = await getSubscriberInviteCount(userId)
+	const { position } = await getSubscriberRankingPosition(userId)
+
+	return { inviteUrl, ranking, totalClicks, totalSubscribers, position }
+}
+interface ConfirmedPageProps {
+	params: { userId: string }
+	getData: ({ userId }: { userId: string }) => Promise<{
+		inviteUrl: string
+		ranking: { name: string; score: number }[]
+		totalClicks: number
+		totalSubscribers: number
+		position: number | null
+	}>
+}
+export default async function ConfirmedPage({ params, getData = getAllData }: ConfirmedPageProps) {
+	const { userId } = params
+	const { inviteUrl, ranking, totalClicks, totalSubscribers, position } = await getData({ userId })
 
 	return (
 		<main>
@@ -35,17 +57,23 @@ export default async function ConfirmedPage({ params }: ConfirmedPageProps) {
 						<LinkCopy url={inviteUrl} />
 
 						<div className='grid gap-2 mt-5 sm:grid-cols-3 md:gap-3 md:mt-6'>
-							<StatCard title='Acessos ao link' value='942' icon={LuMousePointerClick} />
-							<StatCard title='Inscrições feitas' value='875' icon={LuBadgeCheck} />
-							<StatCard title='Posição no ranking' value='3º' icon={LuMedal} />
+							<StatCard title='Acessos ao link' value={totalClicks.toString()} icon={LuMousePointerClick} />
+							<StatCard title='Inscrições feitas' value={totalSubscribers.toString()} icon={LuBadgeCheck} />
+							<StatCard title='Posição no ranking' value={position ? position.toString() + 'º' : '-'} icon={LuMedal} />
 						</div>
 					</div>
 					<div className='lg:col-span-4 lg:col-start-7'>
 						<h2 className='text-xl text-gray-200 mb-5'>Ranking de indicações</h2>
 						<div className='space-y-3'>
-							<RankingItem name='André Souza' indications={1.128} position={1} />
-							<RankingItem name='Melissa Loures' indications={928} position={2} />
-							<RankingItem name='Rodrigo Gonçalves' indications={875} position={3} />
+							{ranking.map((item, index) => (
+								<RankingItem
+									key={item.name}
+									name={item.name}
+									indications={item.score}
+									position={index + 1}
+									badge={index + 1 === position}
+								/>
+							))}
 						</div>
 					</div>
 				</div>

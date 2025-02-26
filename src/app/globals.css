@@ -21,6 +21,10 @@
 	--radius-sm: 0.375rem;
 }
 
+body {
+	@apply bg-gray-900 bg-[url("/background.webp")] bg-fixed bg-no-repeat bg-top text-gray-100 antialiased py-8 lg:py-10;
+}
+
 h1,
 h2,
 h3,
