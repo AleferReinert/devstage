@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, fn, userEvent, within } from '@storybook/test'
-import { LinkCopy } from './LinkCopy'
+import { InviteLink } from './InviteLink'
 
 const meta = {
-	title: 'Components/LinkCopy',
-	component: LinkCopy,
+	title: 'Components/InviteLink',
+	component: InviteLink,
 	args: {
 		url: 'https://example.com/0123456789'
 	}
-} satisfies Meta<typeof LinkCopy>
+} satisfies Meta<typeof InviteLink>
 
 export default meta
 type Story = StoryObj<typeof meta>

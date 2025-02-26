@@ -4,7 +4,7 @@ interface ButtonProps extends ComponentProps<'button'> {
 	theme?: 'default' | 'icon'
 	children: ReactNode
 }
-export function Button({ theme = 'default', children, ...rest }: ButtonProps) {
+export function Button({ theme = 'default', children, className, ...rest }: ButtonProps) {
 	const baseStyles =
 		'cursor-pointer bg-gray-500 flex items-center text-blue transition duration-300 ease-out hover:bg-blue hover:text-gray-900'
 	const themes = {
@@ -13,7 +13,7 @@ export function Button({ theme = 'default', children, ...rest }: ButtonProps) {
 	}
 
 	return (
-		<button {...rest} className={`${baseStyles} ${themes[theme]}`}>
+		<button {...rest} className={`${baseStyles} ${themes[theme]} ${className}`}>
 			{children}
 		</button>
 	)

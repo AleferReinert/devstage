@@ -1,5 +1,5 @@
 import { Container } from '@/components/Container/Container'
-import { LinkCopy } from '@/components/LinkCopy/LinkCopy'
+import { InviteLink } from '@/components/InviteLink/InviteLink'
 import { Logo } from '@/components/Logo/Logo'
 import { RankingItem } from '@/components/RankingItem/RankingItem'
 import { StatCard } from '@/components/StatCard/StatCard'
@@ -46,7 +46,7 @@ export function ConfirmationPage({
 							</p>
 						</div>
 
-						<LinkCopy url={inviteUrl} />
+						<InviteLink url={inviteUrl} />
 
 						<div className='grid gap-2 mt-5 sm:grid-cols-3 md:gap-3 md:mt-6'>
 							<StatCard title='Acessos ao link' value={totalClicks.toString()} icon={LuMousePointerClick} />

@@ -42,8 +42,8 @@ export const Default: Story = {
 			expect(heading).toBeVisible()
 		})
 
-		await step('Verify LinkCopy component', () => {
-			const linkCopyComponent = canvas.getByTestId('LinkCopyComponent')
+		await step('Verify InviteLink component', () => {
+			const linkCopyComponent = canvas.getByTestId('InviteLinkComponent')
 			expect(linkCopyComponent).toBeVisible()
 		})
 
