@@ -1,23 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
-import Home from './page'
+import { HomePage } from './HomePage'
 
 const meta = {
-	title: 'Pages/Home',
-	component: Home,
+	title: 'Pages/Página inicial',
+	component: HomePage,
 	tags: ['!autodocs'],
 	parameters: {
 		nextjs: {
 			appDirectory: true
 		}
 	}
-} satisfies Meta<typeof Home>
+} satisfies Meta<typeof HomePage>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-	name: 'Home',
+	name: 'Página inicial',
 	play: async ({ canvasElement, step }) => {
 		const canvas = within(canvasElement)
 

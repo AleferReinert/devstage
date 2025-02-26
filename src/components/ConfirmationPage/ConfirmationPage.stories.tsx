@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
-import { ConfirmationPage } from './page'
+import { ConfirmationPage } from './ConfirmationPage'
 
 const meta = {
 	title: 'Pages/Inscrição Confirmada',
