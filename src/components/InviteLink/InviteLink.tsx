@@ -14,7 +14,7 @@ export function InviteLink({ url }: InviteLinkProps) {
 
 		setTimeout(() => {
 			setCopied(false)
-		}, 2000)
+		}, 4000)
 	}
 
 	return (
