@@ -11,29 +11,21 @@ import {
 } from '@/http/api'
 import { LuBadgeCheck, LuMedal, LuMousePointerClick } from 'react-icons/lu'
 
-async function getAllData({ userId }: { userId: string }) {
-	const inviteUrl = `${process.env.API_URL}/invites/${userId}`
-	const { ranking } = await getRanking()
-	const { count: totalClicks } = await getSubscriberInviteClicks(userId)
-	const { count: totalSubscribers } = await getSubscriberInviteCount(userId)
-	const { position } = await getSubscriberRankingPosition(userId)
-
-	return { inviteUrl, ranking, totalClicks, totalSubscribers, position }
+interface ConfirmationPageProps {
+	inviteUrl: string
+	ranking: { name: string; score: number }[]
+	totalClicks: number
+	totalSubscribers: number
+	position: number | null
 }
-interface ConfirmedPageProps {
-	params: { userId: string }
-	getData?: ({ userId }: { userId: string }) => Promise<{
-		inviteUrl: string
-		ranking: { name: string; score: number }[]
-		totalClicks: number
-		totalSubscribers: number
-		position: number | null
-	}>
-}
-const ConfirmedPage = async ({ params, getData = getAllData }: ConfirmedPageProps) => {
-	const { userId } = params
-	const { inviteUrl, ranking, totalClicks, totalSubscribers, position } = await getData({ userId })
 
+export function ConfirmationPage({
+	inviteUrl,
+	ranking,
+	totalClicks,
+	totalSubscribers,
+	position
+}: ConfirmationPageProps) {
 	return (
 		<main>
 			<Container>
@@ -82,4 +74,26 @@ const ConfirmedPage = async ({ params, getData = getAllData }: ConfirmedPageProp
 	)
 }
 
-export default ConfirmedPage
+interface ConfirmationPagePopulatedProps {
+	params: Promise<{ userId: string }>
+}
+
+export default async function ConfirmationPagePopulated({ params }: ConfirmationPagePopulatedProps) {
+	const { userId } = await params
+	const inviteUrl = `${process.env.API_URL}/invites/${userId}`
+	const { ranking } = await getRanking()
+	const { count: totalClicks } = await getSubscriberInviteClicks(userId)
+	const { count: totalSubscribers } = await getSubscriberInviteCount(userId)
+	const { position } = await getSubscriberRankingPosition(userId)
+
+	return (
+		<ConfirmationPage
+			inviteUrl={inviteUrl}
+			ranking={ranking}
+			totalClicks={totalClicks}
+			totalSubscribers={totalSubscribers}
+			position={position}
+		/>
+	)
+}
+

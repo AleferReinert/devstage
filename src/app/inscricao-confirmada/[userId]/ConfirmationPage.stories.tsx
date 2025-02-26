@@ -1,10 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { expect, within } from '@storybook/test'
-import Confirmed from './page'
+import { ConfirmationPage } from './page'
 
-const mockGetData = async ({ userId }: { userId: string }) => {
-	return {
-		inviteUrl: `https://mocked-url.com/invites/${userId}`,
+const meta = {
+	title: 'Pages/Inscrição Confirmada',
+	component: ConfirmationPage,
+	tags: ['!autodocs'],
+	parameters: {
+		nextjs: {
+			appDirectory: true
+		}
+	},
+	args: {
+		inviteUrl: `https://mocked-url.com/invites/123456`,
 		ranking: [
 			{ name: 'John Doe', score: 34 },
 			{ name: 'Mike Smith', score: 20 },
@@ -14,22 +22,7 @@ const mockGetData = async ({ userId }: { userId: string }) => {
 		totalSubscribers: 20,
 		position: 2
 	}
-}
-
-const meta = {
-	title: 'Pages/Inscrição Confirmada',
-	component: Confirmed,
-	tags: ['!autodocs'],
-	parameters: {
-		nextjs: {
-			appDirectory: true
-		}
-	},
-	args: {
-		params: { userId: '123' },
-		getData: mockGetData
-	}
-} satisfies Meta<typeof Confirmed>
+} satisfies Meta<typeof ConfirmationPage>
 
 export default meta
 type Story = StoryObj<typeof meta>
