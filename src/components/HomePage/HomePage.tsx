@@ -2,6 +2,7 @@ import { AboutEvent } from '@/components/AboutEvent/AboutEvent'
 import { Container } from '@/components/Container/Container'
 import { Logo } from '@/components/Logo/Logo'
 import { RegistrationForm } from '@/components/RegistrationForm/RegistrationForm'
+import { Suspense } from 'react'
 
 export function HomePage() {
 	return (
@@ -20,7 +21,9 @@ export function HomePage() {
 						<AboutEvent />
 					</div>
 					<div className='lg:col-span-4 lg:h-full'>
-						<RegistrationForm />
+						<Suspense>
+							<RegistrationForm />
+						</Suspense>
 					</div>
 				</div>
 			</Container>
