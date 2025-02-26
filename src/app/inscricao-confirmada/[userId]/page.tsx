@@ -22,7 +22,7 @@ async function getAllData({ userId }: { userId: string }) {
 }
 interface ConfirmedPageProps {
 	params: { userId: string }
-	getData: ({ userId }: { userId: string }) => Promise<{
+	getData?: ({ userId }: { userId: string }) => Promise<{
 		inviteUrl: string
 		ranking: { name: string; score: number }[]
 		totalClicks: number
