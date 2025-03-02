@@ -3,7 +3,7 @@ import { expect, within } from '@storybook/test'
 import { HomePage } from './HomePage'
 
 const meta = {
-	title: 'Pages/Página inicial',
+	title: 'Pages/Início',
 	component: HomePage,
 	tags: ['!autodocs'],
 	parameters: {
@@ -17,7 +17,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-	name: 'Página inicial',
+	name: 'Início',
 	play: async ({ canvasElement, step }) => {
 		const canvas = within(canvasElement)
 

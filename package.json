@@ -9,7 +9,8 @@
 		"lint": "next lint",
 		"storybook": "storybook dev -p 6006",
 		"test-storybook": "test-storybook",
-		"build-storybook": "storybook build"
+		"build-storybook": "storybook build",
+		"chromatic": "npx chromatic --project-token=chpt_bd6f0707e86ed89"
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^4.1.2",
@@ -35,6 +36,7 @@
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
+		"chromatic": "^11.26.1",
 		"orval": "^7.5.0",
 		"storybook": "^8.5.8",
 		"typescript": "^5"
