@@ -8,7 +8,7 @@ import {
 
 export default async function ConfirmationPagePopulated({ params }: { params: Promise<{ userId: string }> }) {
 	const { userId } = await params
-	const inviteUrl = `${process.env.API_URL}/invites/${userId}`
+	const inviteUrl = `${process.env.NEXT_PUBLIC_API_URL}/invites/${userId}`
 	const { ranking } = await getRanking()
 	const { count: totalClicks } = await getSubscriberInviteClicks(userId)
 	const { count: totalSubscribers } = await getSubscriberInviteCount(userId)

@@ -1,4 +1,4 @@
-# NLW Connect - DevStage (React)
+# DevStage
 
 DevStage é site responsivo de inscrição e indicação para eventos.
 
@@ -57,5 +57,5 @@ Explore o projeto no link: [DevStage](https://devstage-nlw-connect.vercel.app).
 
 ## Crédito
 
-Projeto desenvolvido durante o NLW da [Rocketseat](https://github.com/Rocketseat).
+Projeto desenvolvido durante a trilha de React do NLW Connect da [Rocketseat](https://github.com/Rocketseat).
 
