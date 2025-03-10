@@ -2,6 +2,7 @@
 import { subscribeToEvent } from '@/http/api'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { LuArrowRight, LuMail, LuUser } from 'react-icons/lu'
 import { z } from 'zod'
@@ -24,8 +25,12 @@ export function RegistrationForm() {
 		handleSubmit,
 		formState: { errors }
 	} = useForm<RegistrationSchema>({ resolver: zodResolver(registrationSchema) })
+	const [buttonState, setButtonState] = useState(true)
+	const [buttonLabel, setButtonLabel] = useState('Confirmar')
 
 	async function onRegistration({ name, email }: RegistrationSchema) {
+		setButtonLabel('Inscrevendo...')
+		setButtonState(false)
 		const referrer = searchParams.get('referrer')
 		const { subscriberId } = await subscribeToEvent({ name, email, referrer })
 		router.push(`/inscricao-confirmada/${subscriberId}`)
@@ -41,9 +46,9 @@ export function RegistrationForm() {
 				<div className='mb-6'>
 					<Input placeholder='E-mail' icon={LuMail} type='email' {...register('email')} error={errors.email?.message} />
 				</div>
-				<Button type='submit'>
-					Confirmar
-					<LuArrowRight />
+				<Button type='submit' disabled={buttonState === false}>
+					{buttonLabel}
+					{buttonState && <LuArrowRight />}
 				</Button>
 			</Box>
 		</form>
