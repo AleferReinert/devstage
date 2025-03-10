@@ -38,9 +38,9 @@
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"chromatic": "^11.26.1",
+		"dotenv": "^16.4.7",
 		"orval": "^7.5.0",
 		"storybook": "^8.5.8",
 		"typescript": "^5"
 	}
 }
-

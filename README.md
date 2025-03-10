@@ -1,6 +1,6 @@
 # DevStage
 
-DevStage é site responsivo de inscrição e indicação para eventos.
+DevStage é um site responsivo de inscrição e indicação para eventos.
 
 ## Começando
 
@@ -17,26 +17,31 @@ DevStage é site responsivo de inscrição e indicação para eventos.
    ```
 
 3. Defina as variáveis de ambiente como em `.env.example`.
+4. Com a api rodando, gere o cliente typescript a partir das especificações do Swagger:
+
+   ```
+   npm run orval
+   ```
 
 ## Scripts
 
-1. Inicie o servidor de desenvolvimento:
+#### Iniciar o servidor de desenvolvimento:
 
-   ```
-   npm run dev
-   ```
+```
+npm run dev
+```
 
-2. Inicie o Storybook:
+#### Iniciar o Storybook:
 
-   ```
-   npm run storybook
-   ```
+```
+npm run storybook
+```
 
-3. Execute os testes:
+#### Executar os testes:
 
-   ```
-   npm run test-storybook
-   ```
+```
+npm run test-storybook
+```
 
 ## Material complementar
 
@@ -44,7 +49,8 @@ DevStage é site responsivo de inscrição e indicação para eventos.
 
 ## Tecnologias Utilizadas
 
-- **Orval:** Gera os tipos typescript do Swagger na api para o front-end.
+- **dotenv:** Carrega variáveis de ambiente de um arquivo `.env` para o `process.env`.
+- **Orval:** Gerador de clientes TypeScript a partir de especificações OpenAPI (Swagger)
 - **React:** Biblioteca JavaScript para construir interfaces de usuário.
 - **React Icons:** Conjunto de ícones para projetos React.
 - **Storybook**: Ferramenta para construir e testar componentes de forma isolada.
