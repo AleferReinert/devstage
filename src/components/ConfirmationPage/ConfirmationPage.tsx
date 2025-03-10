@@ -49,7 +49,7 @@ export function ConfirmationPage({
 						</div>
 					</div>
 					<div className='lg:col-span-4 lg:col-start-7'>
-						<h2 className='text-xl text-gray-200 mb-5'>Ranking de indicações</h2>
+						{ranking.length && <h2 className='text-xl text-gray-200 mb-5'>Ranking de indicações</h2>}
 						<div className='space-y-3'>
 							{ranking.map((item, index) => (
 								<RankingItem
