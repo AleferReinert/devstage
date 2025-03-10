@@ -10,7 +10,8 @@
 		"storybook": "storybook dev -p 6006",
 		"test-storybook": "test-storybook",
 		"build-storybook": "storybook build",
-		"chromatic": "npx chromatic --project-token=chpt_bd6f0707e86ed89"
+		"chromatic": "npx chromatic --project-token=chpt_bd6f0707e86ed89",
+		"orval": "orval --config orval.config.ts"
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^4.1.2",

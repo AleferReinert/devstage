@@ -44,6 +44,7 @@ DevStage é site responsivo de inscrição e indicação para eventos.
 
 ## Tecnologias Utilizadas
 
+- **Orval:** Gera os tipos typescript do Swagger na api para o front-end.
 - **React:** Biblioteca JavaScript para construir interfaces de usuário.
 - **React Icons:** Conjunto de ícones para projetos React.
 - **Storybook**: Ferramenta para construir e testar componentes de forma isolada.
