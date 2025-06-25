@@ -15,7 +15,9 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-	title: 'devStage'
+	title: 'devStage - CodeCraft Summit 2025',
+	description:
+		'Um evento feito por e para pessoas desenvolvedoras apaixonadas por criar soluções inovadoras e compartilhar conhecimento. '
 }
 
 export default function RootLayout({
@@ -24,7 +26,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en' className={`${oxanium.variable} ${montserrat.variable}`}>
+		<html lang='pt-BR' className={`${oxanium.variable} ${montserrat.variable}`}>
 			<body>{children}</body>
 		</html>
 	)

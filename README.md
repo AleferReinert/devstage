@@ -1,6 +1,8 @@
 # DevStage
 
-DevStage é um site responsivo de inscrição e indicação para eventos.
+Website de inscrição e indicação para eventos.
+
+Desenvolvido durante a trilha de React do NLW Connect da [Rocketseat](https://github.com/Rocketseat).
 
 ## Começando
 
@@ -23,25 +25,15 @@ DevStage é um site responsivo de inscrição e indicação para eventos.
    npm run orval
    ```
 
-## Scripts
+## Scripts disponíveis
 
-#### Iniciar o servidor de desenvolvimento:
-
-```
-npm run dev
-```
-
-#### Iniciar o Storybook:
-
-```
-npm run storybook
-```
-
-#### Executar os testes:
-
-```
-npm run test-storybook
-```
+| Script                   | Descrição                            |
+| :----------------------- | :----------------------------------- |
+| `npm run dev`            | Inicia o servidor de desenvolvimento |
+| `npm run storybook`      | Inicia o Storybook                   |
+| `npx tsc`                | Validação de TypeScript              |
+| `npm run lint`           | Validação do Next.js                 |
+| `npm run test-storybook` | Executa testes unitários             |
 
 ## Material complementar
 
@@ -58,11 +50,9 @@ npm run test-storybook
 - **Testing Library:** Ferramenta de testes unitários.
 - **TypeScript:** Superset de JavaScript que adiciona tipagem estática opcional.
 
-## URL do Projeto
+## Links
 
-Explore o projeto no link: [DevStage](https://devstage-nlw-connect.vercel.app).
+Deploy: [devstage-nlw-connect.vercel.app](https://devstage-nlw-connect.vercel.app)
 
-## Crédito
-
-Projeto desenvolvido durante a trilha de React do NLW Connect da [Rocketseat](https://github.com/Rocketseat).
+Storybook: [Visualizar no Chromatic](https://main--67c3a6b77510efaa57103f96.chromatic.com/)
 
