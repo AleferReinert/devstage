@@ -30,7 +30,7 @@ export const Default: Story = {
 
 export const IconTheme: Story = {
 	args: {
-		children: <LuCopy role='img' />,
+		children: <LuCopy role='img' title='Copiar' />,
 		theme: 'icon'
 	},
 	play: async ({ canvasElement, step }) => {

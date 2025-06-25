@@ -28,7 +28,7 @@ export const Default: Story = {
 		})
 
 		await step('Verify icon visibility', () => {
-			const icon = canvas.getByRole('img')
+			const icon = canvas.getByRole('img', { hidden: true })
 			expect(icon).toBeVisible()
 		})
 	}

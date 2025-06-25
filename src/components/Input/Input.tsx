@@ -22,7 +22,7 @@ export function Input({ icon, error, ...rest }: InputProps) {
 			transition 
 			`,
 		input: `
-			${error ? 'text-danger' : 'text-gray-400 focus:text-gray-100'}
+			${error ? 'text-danger' : 'text-gray-300 focus:text-gray-100'}
 			transition h-full focus:outline-none peer
 		`
 	}
@@ -30,7 +30,7 @@ export function Input({ icon, error, ...rest }: InputProps) {
 	return (
 		<div className='group'>
 			<div className={styles.container} data-testid='input-container'>
-				<Icon size={20} className={styles.icon} role='img' />
+				<Icon aria-hidden size={20} className={styles.icon} role='img' />
 				<input type='text' {...rest} className={styles.input} />
 			</div>
 			{error && <span className='text-danger text-xs'>{error}</span>}

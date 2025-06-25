@@ -12,7 +12,7 @@ export function StatCard({ title, value, icon }: StatCardProps) {
 
 	return (
 		<Box data-testid='StatCardComponent' className='text-center relative flex flex-col-reverse pt-7 pb-5'>
-			<Icon size={20} role='img' className='text-purple absolute top-3 left-3' />
+			<Icon size={20} aria-hidden role='img' className='text-purple absolute top-3 left-3' />
 			<h3 className='text-gray-300 text-sm !font-sans !font-normal'>{title}</h3>
 			<p className='text-gray-200 font-heading text-2xl font-semibold'>{value}</p>
 		</Box>

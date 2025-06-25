@@ -30,17 +30,17 @@ export const Default: Story = {
 	play: async ({ canvasElement, step }) => {
 		const canvas = within(canvasElement)
 
-		await step('Verify icon', () => {
-			const icon = canvas.getByRole('img')
+		await step('Icon', () => {
+			const icon = canvas.getByRole('img', { hidden: true })
 			expect(icon).toBeVisible()
 		})
 
-		await step('Verify title', () => {
+		await step('Title', () => {
 			const title = canvas.getByRole('heading', { level: 3 })
 			expect(title).toHaveTextContent('Acessos ao link')
 		})
 
-		await step('Verify value', () => {
+		await step('Value', () => {
 			const value = canvas.getByRole('paragraph')
 			expect(value).toHaveTextContent('942')
 		})
