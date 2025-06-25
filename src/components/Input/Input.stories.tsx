@@ -47,7 +47,7 @@ export const WithError: Story = {
 		})
 
 		await step('Verify icon has color danger', () => {
-			const icon = canvas.getByRole('img')
+			const icon = canvas.getByRole('img', { hidden: true })
 			expect(icon).toHaveClass('text-danger')
 		})
 

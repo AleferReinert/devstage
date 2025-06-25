@@ -42,13 +42,15 @@ Desenvolvido durante a trilha de React do NLW Connect da [Rocketseat](https://gi
 ## Tecnologias Utilizadas
 
 - **dotenv:** Carrega variáveis de ambiente de um arquivo `.env` para o `process.env`.
+- **Husky:** Configuração de hooks Git para validações automáticas.
 - **Orval:** Gerador de clientes TypeScript a partir de especificações OpenAPI (Swagger)
-- **React:** Biblioteca JavaScript para construir interfaces de usuário.
+- **Next.js:** Framework React para apps web modernas.
+- **React:** Biblioteca para criação de interfaces de usuário.
 - **React Icons:** Conjunto de ícones para projetos React.
-- **Storybook**: Ferramenta para construir e testar componentes de forma isolada.
-- **Tailwind CSS:** Framework CSS baseado em utilitários.
-- **Testing Library:** Ferramenta de testes unitários.
-- **TypeScript:** Superset de JavaScript que adiciona tipagem estática opcional.
+- **Storybook:** Ambiente para desenvolvimento de componentes isolados.
+- **Tailwind CSS:** Framework utilitário para estilização com CSS.
+- **Testing Library:** Ferramenta para testes unitários.
+- **TypeScript:** Superset de JavaScript com tipagem estática.
 
 ## Links
 
