@@ -8,7 +8,7 @@ const config: StorybookConfig = {
 		options: {}
 	},
 	features: {
-		experimentalRSC: true // to create server side components
+		experimentalRSC: true
 	},
 	// docs: {},
 
