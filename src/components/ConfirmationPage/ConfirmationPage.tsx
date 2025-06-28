@@ -49,17 +49,21 @@ export function ConfirmationPage({
 						</div>
 					</div>
 					<div className='lg:col-span-4 lg:col-start-7'>
-						{ranking.length && <h2 className='text-xl text-gray-200 mb-5'>Ranking de indicações</h2>}
+						<h2 className='text-xl text-gray-200 mb-5'>Ranking de indicações</h2>
 						<div className='space-y-3'>
-							{ranking.map((item, index) => (
-								<RankingItem
-									key={item.name}
-									name={item.name}
-									indications={item.score}
-									position={index + 1}
-									badge={index + 1 === position}
-								/>
-							))}
+							{ranking.length > 0 ? (
+								ranking.map((item, index) => (
+									<RankingItem
+										key={item.name}
+										name={item.name}
+										indications={item.score}
+										position={index + 1}
+										badge={index + 1 === position}
+									/>
+								))
+							) : (
+								<p className='text-gray-300'>Nenhuma indicação ainda.</p>
+							)}
 						</div>
 					</div>
 				</div>

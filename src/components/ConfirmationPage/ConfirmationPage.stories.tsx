@@ -10,7 +10,31 @@ const meta = {
 		nextjs: {
 			appDirectory: true
 		}
+	}
+} satisfies Meta<typeof ConfirmationPage>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Empty: Story = {
+	args: {
+		inviteUrl: `https://mocked-url.com/invites/123456`,
+		ranking: [],
+		totalClicks: 0,
+		totalSubscribers: 0,
+		position: null
 	},
+	play: async ({ canvasElement, step }) => {
+		const canvas = within(canvasElement)
+
+		await step('Empty text', () => {
+			const text = canvas.getByText('Nenhuma indicação ainda.')
+			expect(text).toBeVisible()
+		})
+	}
+}
+
+export const Full: Story = {
 	args: {
 		inviteUrl: `https://mocked-url.com/invites/123456`,
 		ranking: [
@@ -21,14 +45,7 @@ const meta = {
 		totalClicks: 50,
 		totalSubscribers: 20,
 		position: 2
-	}
-} satisfies Meta<typeof ConfirmationPage>
-
-export default meta
-type Story = StoryObj<typeof meta>
-
-export const Default: Story = {
-	name: 'Inscrição Confirmada',
+	},
 	play: async ({ canvasElement, step }) => {
 		const canvas = within(canvasElement)
 
