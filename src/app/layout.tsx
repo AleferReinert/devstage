@@ -15,9 +15,33 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-	title: 'devStage - CodeCraft Summit 2025',
-	description:
-		'Um evento feito por e para pessoas desenvolvedoras apaixonadas por criar soluções inovadoras e compartilhar conhecimento. '
+	title: 'DevStage',
+	description: 'Website de inscrição e indicação para eventos.',
+	authors: [{ name: `Alefer Reinert`, url: 'https://aleferreinert.vercel.app' }],
+	openGraph: {
+		title: 'DevStage',
+		description: 'Website de inscrição e indicação para eventos.',
+		url: 'https://devstage-nlw-connect.vercel.app',
+		siteName: 'DevStage',
+		type: 'website',
+		images: [
+			{
+				url: '/social-share.webp',
+				width: 1200,
+				height: 630,
+				alt: 'Visualização do site em um celular, tablet e notebook.'
+			}
+		]
+	},
+	twitter: {
+		title: 'DevStage',
+		description: 'Website de inscrição e indicação para eventos.',
+		card: 'summary_large_image',
+		images: '/social-share.webp'
+	},
+	alternates: {
+		canonical: 'https://devstage-nlw-connect.vercel.app'
+	}
 }
 
 export default function RootLayout({
